@@ -131,15 +131,11 @@ if __name__ == '__main__':
         get_index_PL()
         get_FX_PL()
         get_Bond_PL()
-        print(big_list)
-
-
-        # l_tuple = tuple(big_list)
-        # content = []
-        # content.append(l_tuple)
-        # insertDB(content)
-        # time.sleep(10)
-        # print(datetime.datetime.now())
+        l_tuple = tuple(big_list)
+        content = []
+        content.append(l_tuple)
+        insertDB(content)
+        print(datetime.datetime.now())
 
 
 
