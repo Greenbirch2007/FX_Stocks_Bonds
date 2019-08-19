@@ -22,10 +22,10 @@ from selenium import webdriver
 
 
 # 都假定做多
-
-Index_start = 22250  # 日经225指数
-FX_start = 111.873     #美元日元 买价
-Bond_start = 152.64  # 10年期国债期货
+# 2019.8.18 日股重新开始(近半年的趋势，股指，国债下跌，日元升值)
+Index_start = 20418  # 日经225指数
+FX_start = 106.36     #美元日元 买价
+Bond_start = 154.85  # 10年期国债期货
 
 
 
