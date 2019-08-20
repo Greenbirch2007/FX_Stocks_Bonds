@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="409afbe3-06e5-437b-8b63-9c43360a0d86" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Germany/FXSB_Germany.py" beforeDir="false" afterPath="$PROJECT_DIR$/Germany/FXSB_Germany.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/USA/FXSB_USA.py" beforeDir="false" afterPath="$PROJECT_DIR$/USA/FXSB_USA.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -33,7 +32,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.FXSB_USA">
+  <component name="RunManager" selected="Python.FXSB_Japan">
     <configuration name="FXSB_Germany" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="FX_Stocks_Bonds" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -120,9 +119,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.FXSB_USA" />
         <item itemvalue="Python.FXSB_Japan" />
         <item itemvalue="Python.FXSB_Janan" />
+        <item itemvalue="Python.FXSB_USA" />
         <item itemvalue="Python.FXSB_Germany" />
       </list>
     </recent_temporary>

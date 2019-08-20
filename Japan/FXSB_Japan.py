@@ -123,7 +123,8 @@ if __name__ == '__main__':
 # id int not null primary key auto_increment,
 # Index_PL varchar(10),
 # FX_PL varchar(10),
-# Bond_PL varchar(10)
+# Bond_PL varchar(10),
+# LastTime timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 # ) engine=InnoDB  charset=utf8;
 
 
