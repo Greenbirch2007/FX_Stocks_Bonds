@@ -61,16 +61,19 @@ def get_FX_PL():
         html = driver.page_source
         selector = etree.HTML(html)
         fx_num = selector.xpath('/html/body/div[1]/div[10]/div/div[1]/p[1]/i/text()')
-        fx_f = fx_num[0]
+        try:
 
-        FX_PL = (float(fx_f)-FX_start)/FX_start
-        FX_PL_100 = FX_PL * 100 # 百分比
-        FX__PL_4 = "%.4f"%FX_PL_100
+            fx_f = fx_num[0]
+
+            FX_PL = (float(fx_f)-FX_start)/FX_start
+            FX_PL_100 = FX_PL * 100 # 百分比
+            FX__PL_4 = "%.4f"%FX_PL_100
 
 
-        big_list.append(FX__PL_4)
-        driver.quit()
-
+            big_list.append(FX__PL_4)
+            driver.quit()
+        except IndexError:
+                pass
     except ValueError as e:
         pass
 
@@ -133,6 +136,7 @@ if __name__ == '__main__':
         content.append(l_tuple)
         insertDB(content)
         print(datetime.datetime.now())
+        time.sleep(8)
 
 
 

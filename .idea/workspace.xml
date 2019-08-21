@@ -4,6 +4,7 @@
     <list default="true" id="409afbe3-06e5-437b-8b63-9c43360a0d86" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Germany/FXSB_Germany.py" beforeDir="false" afterPath="$PROJECT_DIR$/Germany/FXSB_Germany.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Japan/FXSB_Japan.py" beforeDir="false" afterPath="$PROJECT_DIR$/Japan/FXSB_Japan.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/US/FXSB_US.py" beforeDir="false" afterPath="$PROJECT_DIR$/US/FXSB_US.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/USA/FXSB_USA.py" beforeDir="false" afterPath="$PROJECT_DIR$/USA/FXSB_USA.py" afterDir="false" />
     </list>
@@ -19,7 +20,7 @@
   <component name="ProjectId" id="1Pa6D19PjHoT2efKeECDyBxJZuU" />
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../A_J_2markets" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunDashboard">

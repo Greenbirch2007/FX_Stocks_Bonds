@@ -114,6 +114,8 @@ if __name__ == '__main__':
         insertDB(content)
         time.sleep(10)
         print(datetime.datetime.now())
+        time.sleep(5)
+
 
 
 

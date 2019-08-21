@@ -63,15 +63,20 @@ def get_FX_PL():
         html = driver.page_source
         selector = etree.HTML(html)
         fx_num = selector.xpath('/html/body/div[1]/div[10]/div/div[1]/p[1]/i/text()')
-        fx_f = fx_num[0]
 
-        FX_PL = (float(fx_f)-FX_start)/FX_start
-        FX_PL_100 = FX_PL * 100 # 百分比
-        FX__PL_4 = "%.4f"%FX_PL_100
+        try:
+
+            fx_f = fx_num[0]
+
+            FX_PL = (float(fx_f)-FX_start)/FX_start
+            FX_PL_100 = FX_PL * 100 # 百分比
+            FX__PL_4 = "%.4f"%FX_PL_100
 
 
-        big_list.append(FX__PL_4)
-        driver.quit()
+            big_list.append(FX__PL_4)
+            driver.quit()
+        except IndexError:
+            pass
 
     except ValueError as e:
         pass
@@ -88,15 +93,19 @@ def get_Bond_PL():
         html = driver.page_source
         patt = re.compile('<div class="tv-symbol-price-quote__value js-symbol-last">.*?<span>(.*?)</span></div>', re.S)
         items = re.findall(patt, html)
-        bond_f_d = items[0]
+        try:
 
-        Bond_PL = (float(bond_f_d)-Bond_start)/Bond_start
-        Bond_PL_100 = Bond_PL * 100 # 百分比
-        Bond__PL_4 = "%.4f"%Bond_PL_100
+            bond_f_d = items[0]
+
+            Bond_PL = (float(bond_f_d)-Bond_start)/Bond_start
+            Bond_PL_100 = Bond_PL * 100 # 百分比
+            Bond__PL_4 = "%.4f"%Bond_PL_100
 
 
-        big_list.append(Bond__PL_4)
-        driver.quit()
+            big_list.append(Bond__PL_4)
+            driver.quit()
+        except IndexError:
+            pass
 
     except ValueError as e:
         pass
@@ -136,6 +145,8 @@ if __name__ == '__main__':
         content.append(l_tuple)
         insertDB(content)
         print(datetime.datetime.now())
+        time.sleep(8)
+
 
 
 
