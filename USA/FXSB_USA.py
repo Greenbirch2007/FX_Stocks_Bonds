@@ -18,14 +18,14 @@ from selenium import webdriver
 
 # 1.股票数据来自 # 网页财经
 # 2.外汇数据来自  # 东方财富
-# 3.债券数据来自 雅虎　美国10年期国债收益率
+# 3.债券数据来自 tradingview
 
 
 # 都假定做多
 # 2019.8.18 日股重新开始(近半年的趋势，股指，国债下跌，日元升值)
 Index_start = 2900  # 东方财富
 FX_start = 98     #东方财富
-Bond_start = 1.6  #雅虎　美国10年期国债收益率
+Bond_start = 1.6  #雅虎　tradingview
 
 
 
@@ -83,13 +83,14 @@ def get_Bond_PL():
     driver = webdriver.Chrome()
 
     try:
-        url = 'https://finance.yahoo.com/quote/%5ETNX/history?p=%5ETNX'
+        url = 'https://cn.tradingview.com/symbols/TVC-US10Y/'
         driver.get(url)
         html = driver.page_source
-        selector = etree.HTML(html)
-        bond_num = selector.xpath('//*[@id="quote-header-info"]/div[3]/div/div/span[1]/text()')
-        bond_f = bond_num[0]
-        Bond_PL = (float(bond_f)-Bond_start)/Bond_start
+        patt = re.compile('<div class="tv-symbol-price-quote__value js-symbol-last">.*?<span>(.*?)</span></div>', re.S)
+        items = re.findall(patt, html)
+        bond_f_d = items[0]
+
+        Bond_PL = (float(bond_f_d)-Bond_start)/Bond_start
         Bond_PL_100 = Bond_PL * 100 # 百分比
         Bond__PL_4 = "%.4f"%Bond_PL_100
 
@@ -130,11 +131,12 @@ if __name__ == '__main__':
         get_index_PL()
         get_FX_PL()
         get_Bond_PL()
-        l_tuple = tuple(big_list)
-        content = []
-        content.append(l_tuple)
-        insertDB(content)
-        print(datetime.datetime.now())
+        print(big_list)
+        # l_tuple = tuple(big_list)
+        # content = []
+        # content.append(l_tuple)
+        # insertDB(content)
+        # print(datetime.datetime.now())
 
 
 

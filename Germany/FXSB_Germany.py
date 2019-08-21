@@ -18,14 +18,14 @@ from selenium import webdriver
 
 # 1.股票数据来自 # 东方财富
 # 2.外汇数据来自  # 东方财富
-# 3.债券数据来自 欧洲期权期货交易所（用10年期国债期货数据代替）
+# 3.债券数据来自 tradingview
 
 
 # 都假定做多
 # 2019.8.18 日股重新开始(近半年的趋势，股指，国债下跌，日元升值)
 Index_start = 11700  # 东方财富
 FX_start = 1.1     #东方财富
-Bond_start = 178  # 欧洲期货交易所
+Bond_start = 178  # tradingview
 
 
 def get_index_PL():
@@ -81,15 +81,12 @@ def get_Bond_PL():
     driver = webdriver.Chrome()
 
     try :
-        url = 'https://www.eurexchange.asia/asia-02/products/fixed_income_derivatives/german_government/-10-Euro-Bund--244522'
+        url ='https://cn.tradingview.com/symbols/TVC-EUBUND/'
         driver.get(url)
         html = driver.page_source
-        selector = etree.HTML(html)
-        bond_num = selector.xpath('//*[@id="domhandler:9.consumer:VALUE-2CCLASS.comp:PREV.gt:green.eq:ZERO.lt:red.resetLt:.resetGt:.resetEq:ZERO.mdgObj:prices-2Fquote-3FVERSION-3D2-26CODE_SELECTOR_PREVIOUS_LAST-3DLATEST-26ID_TYPE_PERFORMANCE-3D7-26ID_GROUP_TYPE_PRICE-3D1-26ID_QUALITY_PRICE-3D5-26ID_NOTATION-3D238748889.attr:PRICE.wtkm:futures_futures_snapshot_4"]/text()')
-        bond_f = bond_num[0]
-        bond_f_d = bond_f.replace(",",".")
-
-
+        patt = re.compile('<div class="tv-symbol-price-quote__value js-symbol-last">.*?<span>(.*?)</span></div>',re.S)
+        items = re.findall(patt,html)
+        bond_f_d = items[0]
         Bond_PL = (float(bond_f_d)-Bond_start)/Bond_start
         Bond_PL_100 = Bond_PL * 100 # 百分比
         Bond__PL_4 = "%.4f"%Bond_PL_100

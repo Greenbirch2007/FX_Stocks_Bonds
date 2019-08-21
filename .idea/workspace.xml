@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="409afbe3-06e5-437b-8b63-9c43360a0d86" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Germany/FXSB_Germany.py" beforeDir="false" afterPath="$PROJECT_DIR$/Germany/FXSB_Germany.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/US/FXSB_US.py" beforeDir="false" afterPath="$PROJECT_DIR$/US/FXSB_US.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/USA/FXSB_USA.py" beforeDir="false" afterPath="$PROJECT_DIR$/USA/FXSB_USA.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,7 +19,7 @@
   <component name="ProjectId" id="1Pa6D19PjHoT2efKeECDyBxJZuU" />
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../A_J_2markets" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunDashboard">
@@ -32,7 +34,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.FXSB_Japan">
+  <component name="RunManager" selected="Python.FXSB_US">
     <configuration name="FXSB_Germany" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="FX_Stocks_Bonds" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -96,6 +98,27 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="FXSB_US" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="FX_Stocks_Bonds" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/US" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/US/FXSB_US.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="FXSB_USA" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="FX_Stocks_Bonds" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -119,10 +142,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.FXSB_Japan" />
-        <item itemvalue="Python.FXSB_Janan" />
+        <item itemvalue="Python.FXSB_US" />
         <item itemvalue="Python.FXSB_USA" />
         <item itemvalue="Python.FXSB_Germany" />
+        <item itemvalue="Python.FXSB_Japan" />
+        <item itemvalue="Python.FXSB_Janan" />
       </list>
     </recent_temporary>
   </component>
