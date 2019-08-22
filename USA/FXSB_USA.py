@@ -94,8 +94,13 @@ def get_Bond_PL():
         Bond_PL_100 = Bond_PL * 100 # 百分比
         Bond__PL_4 = "%.4f"%Bond_PL_100
 
+        # 增加一个绝对值的判断
+        if abs(float(Bond__PL_4)) > 10:
+            f_bond_p = float(0.000)
+        else:
+            f_bond_p = Bond__PL_4
 
-        big_list.append(Bond__PL_4)
+        big_list.append(f_bond_p)
         driver.quit()
 
     except ValueError as e:
@@ -136,7 +141,7 @@ if __name__ == '__main__':
         content.append(l_tuple)
         insertDB(content)
         print(datetime.datetime.now())
-        time.sleep(5)
+        time.sleep(15)
 
 
 

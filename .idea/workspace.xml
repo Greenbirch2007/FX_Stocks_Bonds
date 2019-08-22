@@ -20,7 +20,7 @@
   <component name="ProjectId" id="1Pa6D19PjHoT2efKeECDyBxJZuU" />
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../A_J_2markets" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunDashboard">
@@ -144,9 +144,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.FXSB_US" />
+        <item itemvalue="Python.FXSB_Japan" />
         <item itemvalue="Python.FXSB_USA" />
         <item itemvalue="Python.FXSB_Germany" />
-        <item itemvalue="Python.FXSB_Japan" />
         <item itemvalue="Python.FXSB_Janan" />
       </list>
     </recent_temporary>
