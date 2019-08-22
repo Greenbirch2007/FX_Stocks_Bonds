@@ -88,20 +88,24 @@ def get_Bond_PL():
         html = driver.page_source
         patt = re.compile('<div class="tv-symbol-price-quote__value js-symbol-last">.*?<span>(.*?)</span></div>', re.S)
         items = re.findall(patt, html)
-        bond_f_d = items[0]
+        try:
 
-        Bond_PL = (float(bond_f_d)-Bond_start)/Bond_start
-        Bond_PL_100 = Bond_PL * 100 # 百分比
-        Bond__PL_4 = "%.4f"%Bond_PL_100
+            bond_f_d = items[0]
 
-        # 增加一个绝对值的判断
-        if abs(float(Bond__PL_4)) > 10:
-            f_bond_p = float(0.000)
-        else:
-            f_bond_p = Bond__PL_4
+            Bond_PL = (float(bond_f_d)-Bond_start)/Bond_start
+            Bond_PL_100 = Bond_PL * 100 # 百分比
+            Bond__PL_4 = "%.4f"%Bond_PL_100
 
-        big_list.append(f_bond_p)
-        driver.quit()
+            # 增加一个绝对值的判断
+            if abs(float(Bond__PL_4)) > 10:
+                f_bond_p = float(0.000)
+            else:
+                f_bond_p = Bond__PL_4
+
+            big_list.append(f_bond_p)
+            driver.quit()
+        except IndexError:
+            pass
 
     except ValueError as e:
         pass
