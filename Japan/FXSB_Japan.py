@@ -71,18 +71,22 @@ def get_Bond_PL():
         html = driver.page_source
         selector = etree.HTML(html)
         bond_num = selector.xpath('//*[@id="readArea"]/div[2]/div/table/tbody/tr[2]/td[6]/text()')
-        Bond_f = bond_num[0][-6:]
+        try:
+            Bond_f = bond_num[0][-6:]
 
-        Bond_PL = (float(Bond_f)-Bond_start)/Bond_start    * 100 # 百分比
-        Bond__PL_4 = "%.4f"%Bond_PL
-        # 增加一个绝对值的判断
-        if abs(float(Bond__PL_4)) > 10:
-            f_bond_p = float(0.000)
-        else:
-            f_bond_p = Bond__PL_4
+            Bond_PL = (float(Bond_f)-Bond_start)/Bond_start    * 100 # 百分比
+            Bond__PL_4 = "%.4f"%Bond_PL
+            # 增加一个绝对值的判断
+            if abs(float(Bond__PL_4)) > 10:
+                f_bond_p = float(0.000)
+            else:
+                f_bond_p = Bond__PL_4
 
-        big_list.append(f_bond_p)
-        driver.quit()
+            big_list.append(f_bond_p)
+            driver.quit()
+        except IndexError:
+            pass
+
     except ValueError as e:
         pass
 

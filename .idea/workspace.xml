@@ -31,7 +31,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.FXSB_USA">
+  <component name="RunManager" selected="Python.FXSB_Japan">
     <configuration name="FXSB_Germany" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="FX_Stocks_Bonds" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -139,10 +139,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.FXSB_USA" />
-        <item itemvalue="Python.FXSB_US" />
         <item itemvalue="Python.FXSB_Japan" />
         <item itemvalue="Python.FXSB_Germany" />
+        <item itemvalue="Python.FXSB_US" />
+        <item itemvalue="Python.FXSB_USA" />
         <item itemvalue="Python.FXSB_Janan" />
       </list>
     </recent_temporary>
