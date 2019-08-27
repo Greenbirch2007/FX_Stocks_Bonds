@@ -83,7 +83,7 @@ def get_Bond_PL():
     driver = webdriver.Chrome()
 
     try:
-        url = 'https://cn.tradingview.com/symbols/TVC-US10Y/'
+        url = 'https://cn.tradingview.com/symbols/TVC-US10Y/technicals/'
         driver.get(url)
         html = driver.page_source
         patt = re.compile('<div class="tv-symbol-price-quote__value js-symbol-last">.*?<span>(.*?)</span></div>', re.S)
